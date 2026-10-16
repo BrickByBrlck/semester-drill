@@ -49,7 +49,7 @@
       <p>Übungsaufgaben zu HM1, EX1 und MMP1 in vier Stufen, von der ersten Formel bis zum Klausurniveau.
         Jede Aufgabe wird sofort geprüft, mit Hinweis auf den typischen Fehler.</p>
       <ul>
-        <li><strong>Übungsblätter:</strong> was gerade dran ist, nach der Abgabe zum Nacharbeiten.</li>
+        <li><strong>Übungsblätter:</strong> Aufgaben zum Stoff des aktuellen Blatts, mit eigenen Zahlen.</li>
         <li><strong>Klausurtraining:</strong> Aufgabentypen aus Altklausuren mit eigenen Zahlen.</li>
         <li><strong>Dein Stand wird automatisch gespeichert</strong> und ist auf jedem Gerät da, auf dem du dich anmeldest.</li>
       </ul>
