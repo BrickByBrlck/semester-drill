@@ -241,7 +241,7 @@
         <ul><li>deinen Anzeigenamen und dein Profilbild</li><li>dein Level und deine Punkte dieser Woche</li></ul>
         <p class="klein muted">Deine Themen, Stufen, Antworten und Fehler sieht niemand. Du kannst das Profil jederzeit verbergen, dann verschwindest du sofort aus der Rangliste.${wieder ? ' Dein Level ' + profil.level + ' ist noch gespeichert.' : ''}</p>
         <label class="rl-feld" for="rl-name">Anzeigename, muss nicht dein echter Name sein
-          <input id="rl-name" maxlength="24" autocomplete="nickname" placeholder="z. B. Vincent oder physik_vince" required></label>
+          <input id="rl-name" maxlength="24" autocomplete="nickname" placeholder="z. B. dein echter Name oder Tjorge" required></label>
         <div class="rl-bildwahl">${ava({ name: '?', bild: entwurfBild })}
           <label class="knopf leise" for="rl-datei">Bild auswählen (optional)</label><input type="file" id="rl-datei" accept="image/*" hidden></div>
         <label class="rl-check" for="rl-ok"><input type="checkbox" id="rl-ok" required>
