@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz · Semester-Drill</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root { --ground: #F5F7FA; --surface: #FFFFFF; --ink: #16202E; --muted: #5A6576; --rule: #DAE0E8; --accent: #2B45B8;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif; --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ground: #0E131A; --surface: #151C26; --ink: #E4E9F0; --muted: #98A3B3; --rule: #2A3444; --accent: #8FA3FF; } }
+:root[data-theme="dark"] { --ground: #0E131A; --surface: #151C26; --ink: #E4E9F0; --muted: #98A3B3; --rule: #2A3444; --accent: #8FA3FF; }
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font-family: var(--body); line-height: 1.6; margin: 0; padding: 0 16px 64px; }
+main { max-width: 72ch; margin: 0 auto; padding-top: 32px; }
+h1, h2 { font-family: var(--display); line-height: 1.2; }
+h1 { font-size: 2.2rem; margin: 0 0 4px; }
+h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<main>
+<p><a href="./">← Zurück zu Semester-Drill</a></p>
+<h1>Datenschutz</h1>
+<p class="muted">Stand: 16.10.2026</p>
+
+<h2>Wer ist verantwortlich?</h2>
+<p>Vincent Sieverding, E-Mail: <a href="mailto:vincent.sieverding@rwth-aachen.de">vincent.sieverding@rwth-aachen.de</a>.<br>
+Semester-Drill ist ein privates, kostenloses Lernprojekt eines Physikstudenten. Es ist kein Angebot der RWTH Aachen.</p>
+
+<h2>Kurz gesagt</h2>
+<ul>
+  <li>Du meldest dich mit deinem Google-Konto an, damit dein Lernstand gespeichert und auf jedem Gerät verfügbar ist.</li>
+  <li>Gespeichert wird, welche Aufgaben du gelöst hast. Es gibt keine Werbung, kein Tracking durch Dritte und keine Weitergabe deiner Daten.</li>
+  <li>Ausgewertet wird nur zusammengefasst, etwa wie viele Aufgaben gelöst werden oder welche Themen besonders schwer sind.
+    Das dient dazu, die Aufgaben zu verbessern.</li>
+  <li>Du kannst dein Konto samt Lernstand jederzeit selbst löschen (Kontomenü oben rechts).</li>
+</ul>
+
+<h2>Welche Daten werden verarbeitet?</h2>
+<table>
+  <tr><th>Was</th><th>Wofür</th><th>Wo</th></tr>
+  <tr><td>Von Google bei der Anmeldung übermittelt: Name, E-Mail-Adresse, Profilbild-Adresse, eine Konto-ID, Zeitpunkt
+    von Registrierung und letzter Anmeldung</td><td>Anmeldung, Zuordnung deines Lernstands</td><td>Firebase Authentication (Google)</td></tr>
+  <tr><td>Lernstand: je Thema und Stufe die letzten Ergebnisse, gelöste Varianten, nächster Wiederholungstermin</td>
+    <td>Fortschritt speichern und anzeigen</td><td>Cloud Firestore (Google), Rechenzentrum Frankfurt am Main</td></tr>
+  <tr><td>Protokoll der Versuche: welche Teilaufgabe, ob richtig, welcher typische Fehler erkannt wurde, Zeitpunkt</td>
+    <td>Wiederholung planen; zusammengefasste Auswertung, um Aufgaben und Fehlerhinweise zu verbessern</td>
+    <td>Cloud Firestore (Google), Frankfurt am Main</td></tr>
+  <tr><td>Technische Zugriffsdaten (IP-Adresse, Zeitpunkt, Browser) beim Abruf der Seite</td>
+    <td>Auslieferung und Sicherheit der Webseite</td><td>GitHub Pages (GitHub)</td></tr>
+</table>
+<p>Lernstand und Protokoll sind nur mit der Konto-ID verknüpft, nicht mit Name oder E-Mail-Adresse. Über die
+Sicherheitsregeln der Datenbank kann nur dein eigenes Konto deinen Lernstand lesen und ändern. Als Betreiber habe ich
+technisch Zugriff auf die Datenbank; ich nutze das nur für zusammengefasste Auswertungen und zur Fehlerbehebung und
+schaue mir nicht gezielt den Stand einzelner Personen an.</p>
+
+<h2>Rechtsgrundlage</h2>
+<p>Anmeldung, Lernstand und Protokoll: Art. 6 Abs. 1 lit. b DSGVO, weil sie nötig sind, um dir die Übungsplattform
+bereitzustellen, die du nutzen möchtest. Zusammengefasste Auswertung und technische Zugriffsdaten: Art. 6 Abs. 1 lit. f
+DSGVO, mein berechtigtes Interesse ist eine sichere Webseite und gute Aufgaben.</p>
+
+<h2>Speicher in deinem Browser</h2>
+<p>Damit du angemeldet bleibst, legt Firebase einen Anmeldeschlüssel im Speicher deines Browsers ab. Außerdem hält die
+Seite eine Kopie deines Lernstands im Browser, damit sie schnell lädt. Beides ist für die Funktion nötig (§ 25 Abs. 2
+Nr. 2 TDDDG). Es gibt keine Cookies zu Werbe- oder Analysezwecken. Schriften und Programmbibliotheken werden von dieser
+Seite selbst geladen, nicht von fremden Servern.</p>
+
+<h2>Dienstleister</h2>
+<ul>
+  <li><strong>Google Firebase</strong> (Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Irland) für Anmeldung
+    und Datenbank. Die Datenbank liegt in Frankfurt am Main. Google kann Daten auch in den USA verarbeiten; Google LLC ist
+    nach dem EU-US Data Privacy Framework zertifiziert. Datenschutzhinweise:
+    <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</li>
+  <li><strong>GitHub Pages</strong> (GitHub Inc., USA) liefert die Webseite aus. GitHub ist nach dem EU-US Data Privacy
+    Framework zertifiziert. Datenschutzhinweise:
+    <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</li>
+</ul>
+
+<h2>Wie lange?</h2>
+<p>Bis du dein Konto löschst. Über „Konto und Lernstand löschen“ im Kontomenü werden Lernstand, Protokoll und
+Anmeldekonto sofort entfernt. Stelle ich das Projekt ein, lösche ich alle Daten.</p>
+
+<h2>Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und
+Widerspruch (Art. 15 bis 21 DSGVO). Schreib dafür einfach an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei
+einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und
+Informationsfreiheit Nordrhein-Westfalen.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* Nur in der Web-Version: Anmeldeseite, Kontomenü, Fußzeile */
+body.abgemeldet main, body.abgemeldet .leiste .sync { visibility: hidden; }
+.anmeldung { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 24px 16px; background: var(--ground); overflow-y: auto; }
+.anmeldung-karte { display: grid; gap: 16px; max-width: 520px; width: 100%; padding: 32px; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; }
+.anmeldung-karte ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.anmeldung-karte .klein, .konto .klein { font-size: .8rem; color: var(--muted); }
+.anmeldung-fehler { font-size: .9rem; color: var(--bad); background: var(--bad-soft); padding: 8px 12px; border-radius: 6px; }
+button.google { justify-self: start; font: inherit; font-weight: 600; padding: 10px 18px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); cursor: pointer; }
+button.google:disabled { opacity: .7; cursor: wait; }
+
+.leiste .sync { margin-left: auto; }
+.konto { position: relative; }
+.konto summary { list-style: none; cursor: pointer; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .85rem; }
+.konto summary::-webkit-details-marker { display: none; }
+.konto-menue { position: absolute; right: 0; top: 38px; z-index: 5; width: 270px; display: grid; gap: 10px; padding: 14px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; box-shadow: 0 8px 24px rgb(0 0 0 / .12); }
+.konto-menue small { color: var(--muted); }
+.konto-menue button, .konto-menue a { font: inherit; font-size: .9rem; text-align: left; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.konto-menue .gefahr { color: var(--bad); }
+
+.fuss { max-width: 1000px; margin: 48px auto 0; padding-top: 14px; border-top: 1px solid var(--rule); font-size: .78rem; color: var(--muted); }
