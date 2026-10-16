@@ -38,6 +38,8 @@ Semester-Drill ist ein privates, kostenloses Lernprojekt eines Physikstudenten. 
   <li>Gespeichert wird, welche Aufgaben du gelöst hast. Es gibt keine Werbung, kein Tracking durch Dritte und keine Weitergabe deiner Daten.</li>
   <li>Ausgewertet wird nur zusammengefasst, etwa wie viele Aufgaben gelöst werden oder welche Themen besonders schwer sind.
     Das dient dazu, die Aufgaben zu verbessern.</li>
+  <li>Die Rangliste ist freiwillig. Nur wenn du ein öffentliches Profil anlegst, sehen andere Nutzer mit öffentlichem
+    Profil deinen Anzeigenamen, dein Profilbild, dein Level und deine Wochenpunkte. Du kannst das jederzeit zurücknehmen.</li>
   <li>Du kannst dein Konto samt Lernstand jederzeit selbst löschen (Kontomenü oben rechts).</li>
 </ul>
 
@@ -58,6 +60,28 @@ Semester-Drill ist ein privates, kostenloses Lernprojekt eines Physikstudenten. 
 Sicherheitsregeln der Datenbank kann nur dein eigenes Konto deinen Lernstand lesen und ändern. Als Betreiber habe ich
 technisch Zugriff auf die Datenbank; ich nutze das nur für zusammengefasste Auswertungen und zur Fehlerbehebung und
 schaue mir nicht gezielt den Stand einzelner Personen an.</p>
+
+<h2 id="rangliste">Öffentliches Profil und Rangliste (freiwillig)</h2>
+<p>Die Rangliste nutzt nur, wer ausdrücklich zustimmt. Ohne öffentliches Profil siehst du die Rangliste nicht und
+niemand sieht etwas von dir.</p>
+<table>
+  <tr><th>Was</th><th>Wer sieht es</th></tr>
+  <tr><td>Selbst gewählter Anzeigename (muss nicht dein echter Name sein) und optional ein Profilbild, das du hochlädst.
+    Das Bild wird vor dem Speichern auf 128 × 128 Pixel verkleinert.</td>
+    <td>Alle angemeldeten Nutzer, die selbst ein öffentliches Profil haben</td></tr>
+  <tr><td>Level und Punkte der laufenden und der vorigen Woche (Punkte für richtig gelöste Aufgaben, Stufe 1 = 1 Punkt
+    bis Stufe 4 = 4 Punkte)</td><td>Dieselben Nutzer</td></tr>
+  <tr><td>Wochenauswertung: wer in einer Woche aufgestiegen ist, mit Anzeigename und Punkten</td><td>Dieselben Nutzer</td></tr>
+  <tr><td>Meldungen: Wenn jemand deinen Namen oder dein Bild als unpassend meldet, werden die Konto-IDs von meldender
+    und gemeldeter Person und der Grund gespeichert</td><td>Nur ich als Betreiber; nach der Bearbeitung gelöscht</td></tr>
+</table>
+<p>Welche Themen du bearbeitest, deine Stufen, Antworten und Fehler sind nie Teil des öffentlichen Profils.
+Speicherort ist Cloud Firestore (Google), Frankfurt am Main. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1
+lit. a DSGVO). Du kannst sie jederzeit widerrufen: Mit „Profil verbergen“ auf der Ranglistenseite werden Anzeigename
+und Bild sofort gelöscht und du verschwindest aus der Rangliste; nur dein Level und deine Punkte bleiben verborgen
+gespeichert, damit du sie beim erneuten Einblenden zurückbekommst. Mit „Konto und Lernstand löschen“ wird auch das
+Profil vollständig gelöscht. Bereits angelegte Wochenauswertungen nennen den Anzeigenamen, den du damals hattest; auf
+Wunsch entferne ich ihn dort. Unpassende Namen oder Bilder kann ich als Betreiber zurücksetzen.</p>
 
 <h2>Rechtsgrundlage</h2>
 <p>Anmeldung, Lernstand und Protokoll: Art. 6 Abs. 1 lit. b DSGVO, weil sie nötig sind, um dir die Übungsplattform
@@ -83,7 +107,7 @@ Seite selbst geladen, nicht von fremden Servern.</p>
 
 <h2>Wie lange?</h2>
 <p>Bis du dein Konto löschst. Über „Konto und Lernstand löschen“ im Kontomenü werden Lernstand, Protokoll und
-Anmeldekonto sofort entfernt. Stelle ich das Projekt ein, lösche ich alle Daten.</p>
+Anmeldekonto sofort entfernt, ebenso ein öffentliches Profil. Stelle ich das Projekt ein, lösche ich alle Daten.</p>
 
 <h2>Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und

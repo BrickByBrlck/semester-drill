@@ -123,6 +123,7 @@
       const versuche = await basis.collection('versuche').get();
       await Promise.all(versuche.docs.map(d => d.ref.delete()));
       await basis.collection('stand').doc('themen').delete();
+      if (window.WEB.loescheProfil) await window.WEB.loescheProfil(user.uid);
       try {
         await user.delete();
       } catch (e) {
@@ -159,6 +160,7 @@
     if (user) {
       zeigeKonto(user);
       const k = { uid: user.uid, db: dbFuer(user.uid) };
+      if (window.WEB.nachAnmeldung) window.WEB.nachAnmeldung(user);
       warten.forEach(w => w(k));
       warten = [];
     } else if (erster) {
@@ -174,6 +176,7 @@
       if (auth.currentUser) r({ uid: auth.currentUser.uid, db: dbFuer(auth.currentUser.uid) });
       else warten.push(r);
     }),
+    intern: { fs, auth },      // für rangliste.js
   };
 
   document.addEventListener('DOMContentLoaded', fusszeile);
