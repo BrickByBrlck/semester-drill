@@ -123,6 +123,7 @@
       const versuche = await basis.collection('versuche').get();
       await Promise.all(versuche.docs.map(d => d.ref.delete()));
       await basis.collection('stand').doc('themen').delete();
+      await basis.collection('stand').doc('einstellungen').delete();
       if (window.WEB.loescheProfil) await window.WEB.loescheProfil(user.uid);
       try {
         await user.delete();
